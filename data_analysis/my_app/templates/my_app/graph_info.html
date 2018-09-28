@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body_block %}
+{% load staticfiles %}
+
+<div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{Plotform.as_p}}
+        <input type="submit" value="Register">
+    </form>
+</div>
+{% endblock %}
